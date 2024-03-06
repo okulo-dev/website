@@ -30,5 +30,14 @@
     "prettier-plugin-tailwindcss": "^0.5.11",
     "tailwind-bootstrap-grid": "^5.1.0",
     "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.3.1",
+    "@ant-design/pro-components": "^2.6.4",
+    "@plasmicapp/cli": "^0.1.327",
+    "@plasmicapp/react-web": "^0.2.322",
+    "@plasmicpkgs/antd5": "^0.0.218",
+    "@plasmicpkgs/plasmic-nav": "^0.0.161",
+    "@plasmicpkgs/plasmic-rich-components": "^1.0.178"
   }
 }
