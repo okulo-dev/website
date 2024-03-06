@@ -112,7 +112,7 @@ function PlasmicNavbar__RenderFunc(props) {
                 role={"img"}
               />
             }
-            link={`/`}
+            link={"#"}
             startIcon={
               <svg
                 className={classNames(projectcss.all, sty.svg___62Iqn)}
@@ -128,68 +128,37 @@ function PlasmicNavbar__RenderFunc(props) {
                 sty.text__vfOXo
               )}
             >
-              {"Home"}
+              {"How it Work"}
             </div>
           </Button>
           <Button
-            className={classNames("__wab_instance", sty.button__o8YCf)}
+            className={classNames("__wab_instance", sty.button___8TFmj)}
             color={"navLink"}
+            endIcon={
+              <svg
+                className={classNames(projectcss.all, sty.svg__tOhg0)}
+                role={"img"}
+              />
+            }
+            link={"#"}
+            startIcon={
+              <svg
+                className={classNames(projectcss.all, sty.svg__rslnl)}
+                role={"img"}
+              />
+            }
+            submitsForm={true}
           >
-            <Button
-              data-plasmic-name={"oProductsButton"}
-              data-plasmic-override={overrides.oProductsButton}
-              className={classNames("__wab_instance", sty.oProductsButton)}
-              color={"navLink"}
-              endIcon={
-                <svg
-                  className={classNames(projectcss.all, sty.svg__tOhg0)}
-                  role={"img"}
-                />
-              }
-              link={`/products`}
-              startIcon={
-                <svg
-                  className={classNames(projectcss.all, sty.svg__rslnl)}
-                  role={"img"}
-                />
-              }
-              submitsForm={true}
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__pzdU
+              )}
             >
-              <div
-                className={classNames(
-                  projectcss.all,
-                  projectcss.__wab_text,
-                  sty.text__pzdU
-                )}
-              >
-                {"Products"}
-              </div>
-            </Button>
+              {"Pricing"}
+            </div>
           </Button>
-          <div
-            data-plasmic-name={"oDropdown"}
-            data-plasmic-override={overrides.oDropdown}
-            className={classNames(projectcss.all, sty.oDropdown)}
-          >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text___50VoR
-              )}
-            >
-              {"gg"}
-            </div>
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text__ebivC
-              )}
-            >
-              {"gg"}
-            </div>
-          </div>
           <Button
             className={classNames("__wab_instance", sty.button__cseOa)}
             color={"navLink"}
@@ -199,7 +168,7 @@ function PlasmicNavbar__RenderFunc(props) {
                 role={"img"}
               />
             }
-            link={`/contact`}
+            link={"#"}
             startIcon={
               <svg
                 className={classNames(projectcss.all, sty.svg__jw28L)}
@@ -215,7 +184,7 @@ function PlasmicNavbar__RenderFunc(props) {
                 sty.text___5A5Wz
               )}
             >
-              {"Contact"}
+              {"FAQs"}
             </div>
           </Button>
         </Stack__>
@@ -224,6 +193,26 @@ function PlasmicNavbar__RenderFunc(props) {
           hasGap={true}
           className={classNames(projectcss.all, sty.freeBox___4Hn8D)}
         >
+          <Button
+            className={classNames("__wab_instance", sty.button___9UtK)}
+            color={"navLink"}
+            endIcon={
+              <svg
+                className={classNames(projectcss.all, sty.svg__gq5XB)}
+                role={"img"}
+              />
+            }
+            link={"#"}
+            startIcon={
+              <svg
+                className={classNames(projectcss.all, sty.svg__vQsG)}
+                role={"img"}
+              />
+            }
+            submitsForm={true}
+          >
+            {"Log in"}
+          </Button>
           <Button
             className={classNames("__wab_instance", sty.button__soVbu)}
             color={"navLinkBlue"}
@@ -242,17 +231,9 @@ function PlasmicNavbar__RenderFunc(props) {
             }
             submitsForm={true}
           >
-            <div
-              className={classNames(
-                projectcss.all,
-                projectcss.__wab_text,
-                sty.text___1AfDe
-              )}
-            >
-              {hasVariant(globalVariants, "screen", "mobile")
-                ? "Get a quote"
-                : "Get a quote"}
-            </div>
+            {hasVariant(globalVariants, "screen", "mobile")
+              ? "Watch Demo"
+              : "Get a quote"}
           </Button>
         </Stack__>
       </Stack__>
@@ -261,10 +242,8 @@ function PlasmicNavbar__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "logo", "oProductsButton", "oDropdown"],
-  logo: ["logo"],
-  oProductsButton: ["oProductsButton"],
-  oDropdown: ["oDropdown"]
+  root: ["root", "logo"],
+  logo: ["logo"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -300,8 +279,6 @@ export const PlasmicNavbar = Object.assign(
   {
     // Helper components rendering sub-elements
     logo: makeNodeComponent("logo"),
-    oProductsButton: makeNodeComponent("oProductsButton"),
-    oDropdown: makeNodeComponent("oDropdown"),
     // Metadata about props expected for PlasmicNavbar
     internalVariantProps: PlasmicNavbar__VariantProps,
     internalArgProps: PlasmicNavbar__ArgProps

@@ -2,7 +2,8 @@
   position: relative;
   border-radius: 6px;
   padding: 16px 32px;
-  border: 2px solid #191b57;
+  border-width: 2px;
+  border-color: #185adb;
 }
 .rootshowStartIcon {
   display: flex;
@@ -10,8 +11,6 @@
 .rootshowEndIcon {
   padding-right: 0px;
   padding-left: 24px;
-  border-style: solid;
-  border-color: #191b57;
 }
 .rootcolor_green {
   background: #34c759;
