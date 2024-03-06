@@ -16,15 +16,17 @@ import {
   createPlasmicElementProxy,
   deriveRenderOpts,
   ensureGlobalVariants,
+  generateStateOnChangeProp,
+  generateStateValueProp,
   hasVariant,
-  useCurrentUser
+  useCurrentUser,
+  useDollarState
 } from "@plasmicapp/react-web";
 import { useDataEnv } from "@plasmicapp/react-web/lib/host";
 import Button from "../../Button"; // plasmic-import: 1njYuUl2Bkl4/component
+import TextInput from "../../TextInput"; // plasmic-import: mu2L8yYGzL8-/component
 import { useScreenVariants as useScreenVariantsa5G59FrFlpm9 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: a5g59frFLPM9/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
-import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
-import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: jLAKfZafnfzEvtQB4DYUAe/projectcss
 import sty from "./PlasmicFooterSection.module.css"; // plasmic-import: iX_hwLn2J9ZA/css
 import FacebooksvgIcon from "./icons/PlasmicIcon__Facebooksvg"; // plasmic-import: yXVfo5Ix7I8m/icon
@@ -50,6 +52,24 @@ function PlasmicFooterSection__RenderFunc(props) {
   const refsRef = React.useRef({});
   const $refs = refsRef.current;
   const currentUser = useCurrentUser?.() || {};
+  const stateSpecs = React.useMemo(
+    () => [
+      {
+        path: "textInput.value",
+        type: "private",
+        variableType: "text",
+        initFunc: ({ $props, $state, $queries, $ctx }) => ""
+      }
+    ],
+
+    [$props, $ctx, $refs]
+  );
+  const $state = useDollarState(stateSpecs, {
+    $props,
+    $ctx,
+    $queries: {},
+    $refs
+  });
   const globalVariants = ensureGlobalVariants({
     screen: useScreenVariantsa5G59FrFlpm9()
   });
@@ -65,8 +85,6 @@ function PlasmicFooterSection__RenderFunc(props) {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
-        plasmic_antd_5_hostless_css.plasmic_tokens,
-        plasmic_plasmic_rich_components_css.plasmic_tokens,
         sty.root
       )}
     >
@@ -281,6 +299,41 @@ function PlasmicFooterSection__RenderFunc(props) {
             </div>
           </Button>
         </div>
+        <div className={classNames(projectcss.all, sty.freeBox__xsgos)}>
+          <TextInput
+            data-plasmic-name={"textInput"}
+            data-plasmic-override={overrides.textInput}
+            className={classNames("__wab_instance", sty.textInput)}
+            onChange={(...eventArgs) => {
+              generateStateOnChangeProp($state, ["textInput", "value"])(
+                (e => e.target?.value).apply(null, eventArgs)
+              );
+            }}
+            placeholder={"Fill your message"}
+            value={generateStateValueProp($state, ["textInput", "value"]) ?? ""}
+          />
+
+          <Button
+            className={classNames("__wab_instance", sty.button___05RDz)}
+            color={"white"}
+            small={
+              hasVariant(globalVariants, "screen", "mobile") ? true : undefined
+            }
+            submitsForm={true}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___4Ks6
+              )}
+            >
+              {hasVariant(globalVariants, "screen", "mobile")
+                ? "Get a quote"
+                : "Get a quote"}
+            </div>
+          </Button>
+        </div>
       </Stack__>
       <div className={classNames(projectcss.all, sty.freeBox__psz5)}>
         <div
@@ -298,8 +351,9 @@ function PlasmicFooterSection__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "img"],
-  img: ["img"]
+  root: ["root", "img", "textInput"],
+  img: ["img"],
+  textInput: ["textInput"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -335,6 +389,7 @@ export const PlasmicFooterSection = Object.assign(
   {
     // Helper components rendering sub-elements
     img: makeNodeComponent("img"),
+    textInput: makeNodeComponent("textInput"),
     // Metadata about props expected for PlasmicFooterSection
     internalVariantProps: PlasmicFooterSection__VariantProps,
     internalArgProps: PlasmicFooterSection__ArgProps

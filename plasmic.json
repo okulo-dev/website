@@ -7,7 +7,7 @@
   },
   "style": {
     "scheme": "css-modules",
-    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.css"
+    "defaultStyleCssFilePath": "plasmic/plasmic__default_style.module.css"
   },
   "images": {
     "scheme": "inlined",
@@ -73,7 +73,8 @@
           }
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "ohDidvG9XsCeFumugENU3J",
@@ -473,7 +474,8 @@
           "componentImportPath": "@plasmicpkgs/antd5/skinny/registerBreadcrumb"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "7nJ7UcFmq9UzB6eXfC5z4a",
@@ -495,7 +497,8 @@
           "componentImportPath": "@plasmicpkgs/plasmic-nav"
         }
       ],
-      "customFunctions": []
+      "customFunctions": [],
+      "jsBundleThemes": []
     },
     {
       "projectId": "jLAKfZafnfzEvtQB4DYUAe",
@@ -735,46 +738,6 @@
           "scheme": "blackbox",
           "componentType": "component",
           "plumeType": "checkbox"
-        },
-        {
-          "id": "F7Z9Aw6tb2mz",
-          "name": "OStatistics",
-          "type": "managed",
-          "projectId": "jLAKfZafnfzEvtQB4DYUAe",
-          "renderModuleFilePath": "plasmic/light_saa_s_landing_page/PlasmicOStatistics.jsx",
-          "importSpec": {
-            "modulePath": "OStatistics.jsx"
-          },
-          "cssFilePath": "plasmic/light_saa_s_landing_page/PlasmicOStatistics.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
-          "id": "d7A8OeTND0y3",
-          "name": "OMainpageImg",
-          "type": "managed",
-          "projectId": "jLAKfZafnfzEvtQB4DYUAe",
-          "renderModuleFilePath": "plasmic/light_saa_s_landing_page/PlasmicOMainpageImg.jsx",
-          "importSpec": {
-            "modulePath": "OMainpageImg.jsx"
-          },
-          "cssFilePath": "plasmic/light_saa_s_landing_page/PlasmicOMainpageImg.module.css",
-          "scheme": "blackbox",
-          "componentType": "component"
-        },
-        {
-          "id": "dOg4A2ORVLmM",
-          "name": "CsPlatform",
-          "type": "managed",
-          "projectId": "jLAKfZafnfzEvtQB4DYUAe",
-          "renderModuleFilePath": "plasmic/light_saa_s_landing_page/PlasmicCsPlatform.jsx",
-          "importSpec": {
-            "modulePath": "CsPlatform.jsx"
-          },
-          "cssFilePath": "plasmic/light_saa_s_landing_page/PlasmicCsPlatform.module.css",
-          "scheme": "blackbox",
-          "componentType": "page",
-          "path": "/cs-platform"
         }
       ],
       "icons": [
@@ -932,11 +895,6 @@
           "id": "hZRack8zqhIm",
           "name": "LogoWhitesvg2Icon",
           "moduleFilePath": "plasmic/light_saa_s_landing_page/icons/PlasmicIcon__LogoWhitesvg2.jsx"
-        },
-        {
-          "id": "gwjZEfFAJAC1",
-          "name": "LogoMainBluesvg3Icon",
-          "moduleFilePath": "plasmic/light_saa_s_landing_page/icons/PlasmicIcon__LogoMainBluesvg3.jsx"
         }
       ],
       "images": [
@@ -1163,27 +1121,27 @@
         {
           "id": "4sxAUZaEffhZ",
           "name": "image",
-          "filePath": "plasmic/light_saa_s_landing_page/images/image.jpg"
+          "filePath": "plasmic/light_saa_s_landing_page/images/image.jpeg"
         },
         {
           "id": "dR9te9gXKLO8",
           "name": "image 2",
-          "filePath": "plasmic/light_saa_s_landing_page/images/image2.jpg"
+          "filePath": "plasmic/light_saa_s_landing_page/images/image2.jpeg"
         },
         {
           "id": "v-45dLI1oKhw",
           "name": "image 3",
-          "filePath": "plasmic/light_saa_s_landing_page/images/image3.jpg"
+          "filePath": "plasmic/light_saa_s_landing_page/images/image3.jpeg"
         },
         {
           "id": "3_U82wUkEfYl",
           "name": "image 4",
-          "filePath": "plasmic/light_saa_s_landing_page/images/image4.jpg"
+          "filePath": "plasmic/light_saa_s_landing_page/images/image4.jpeg"
         },
         {
           "id": "yY8E08HYXqKN",
           "name": "image 5",
-          "filePath": "plasmic/light_saa_s_landing_page/images/image5.jpg"
+          "filePath": "plasmic/light_saa_s_landing_page/images/image5.jpeg"
         },
         {
           "id": "QBIkJNW1uZiK",
@@ -1193,7 +1151,7 @@
         {
           "id": "v9hOBPDSC_9j",
           "name": "image 7",
-          "filePath": "plasmic/light_saa_s_landing_page/images/image7.jpg"
+          "filePath": "plasmic/light_saa_s_landing_page/images/image7.jpeg"
         },
         {
           "id": "6j-r-ZCnMlaD",
@@ -1249,56 +1207,11 @@
           "id": "OlOiqt6XdG9M",
           "name": "s ce (150 x 150 px) (9).svg",
           "filePath": "plasmic/light_saa_s_landing_page/images/sCe150X150Px9Svg.svg"
-        },
-        {
-          "id": "hiUkngkfn_wU",
-          "name": "s ce (150 x 150 px) (100 x 100 px).png",
-          "filePath": "plasmic/light_saa_s_landing_page/images/sCe150X150Px100X100Pxpng.png"
-        },
-        {
-          "id": "nNRCGRwHZFhj",
-          "name": "s ce (150 x 150 px) (100 x 100 px) (1920 x 1280 px).svg",
-          "filePath": "plasmic/light_saa_s_landing_page/images/sCe150X150Px100X100Px1920X1280Pxsvg.svg"
-        },
-        {
-          "id": "NlzjjVhNaLGM",
-          "name": "s ce (150 x 150 px) (100 x 100 px) (1920 x 1280 px).svg 2",
-          "filePath": "plasmic/light_saa_s_landing_page/images/sCe150X150Px100X100Px1920X1280Pxsvg2.svg"
-        },
-        {
-          "id": "j42c_UeVo48I",
-          "name": "s ce (150 x 150 px) (100 x 100 px) (1920 x 1280 px) (1).svg",
-          "filePath": "plasmic/light_saa_s_landing_page/images/sCe150X150Px100X100Px1920X1280Px1Svg.svg"
-        },
-        {
-          "id": "zWWZG49OIULQ",
-          "name": "s ce (150 x 150 px) (100 x 100 px) (1920 x 1280 px) (2).svg",
-          "filePath": "plasmic/light_saa_s_landing_page/images/sCe150X150Px100X100Px1920X1280Px2Svg.svg"
-        },
-        {
-          "id": "BsxEFj5iR7Ix",
-          "name": "s ce (150 x 150 px) (100 x 100 px) (1920 x 1280 px) (3).svg",
-          "filePath": "plasmic/light_saa_s_landing_page/images/sCe150X150Px100X100Px1920X1280Px3Svg.svg"
-        },
-        {
-          "id": "uhXtgN_G498X",
-          "name": "s ce (150 x 150 px) (100 x 100 px) (1920 x 1280 px) (4).svg",
-          "filePath": "plasmic/light_saa_s_landing_page/images/sCe150X150Px100X100Px1920X1280Px4Svg.svg"
-        },
-        {
-          "id": "UCWHQEWT56go",
-          "name": "image 11",
-          "filePath": "plasmic/light_saa_s_landing_page/images/image11.jpg"
-        },
-        {
-          "id": "HM0IJMLGGTAQ",
-          "name": "s ce (150 x 150 px) (100 x 100 px) (1920 x 1280 px) (5).svg",
-          "filePath": "plasmic/light_saa_s_landing_page/images/sCe150X150Px100X100Px1920X1280Px5Svg.svg"
         }
       ],
       "indirect": false,
-      "globalContextsFilePath": "plasmic/light_saa_s_landing_page/PlasmicGlobalContextsProvider.jsx",
-      "splitsProviderFilePath": "plasmic/light_saa_s_landing_page/PlasmicSplitsProvider.jsx",
+      "globalContextsFilePath": "",
+      "splitsProviderFilePath": "",
       "codeComponents": [
         {
           "id": "siyxQj58NwtF",
@@ -1323,12 +1236,6 @@
         "name": "Screen",
         "projectId": "jLAKfZafnfzEvtQB4DYUAe",
         "contextFilePath": "plasmic/light_saa_s_landing_page/PlasmicGlobalVariant__Screen.jsx"
-      },
-      {
-        "id": "uM13GKcxjf8r",
-        "name": "Segment",
-        "projectId": "jLAKfZafnfzEvtQB4DYUAe",
-        "contextFilePath": "plasmic/light_saa_s_landing_page/PlasmicGlobalVariant__Segment.jsx"
       }
     ]
   },

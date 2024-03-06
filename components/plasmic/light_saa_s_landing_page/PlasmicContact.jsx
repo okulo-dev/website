@@ -32,8 +32,6 @@ import Checkbox from "../../Checkbox"; // plasmic-import: KmsE4qL6krRi/component
 import Button2 from "../../Button2"; // plasmic-import: K96P0czE0XrY/component
 import { useScreenVariants as useScreenVariantsa5G59FrFlpm9 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: a5g59frFLPM9/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
-import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
-import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: jLAKfZafnfzEvtQB4DYUAe/projectcss
 import sty from "./PlasmicContact.module.css"; // plasmic-import: uouycbbtec1U/css
 import Searchsvg2Icon from "./icons/PlasmicIcon__Searchsvg2"; // plasmic-import: AZR4YB8UrZHT/icon
@@ -124,8 +122,6 @@ function PlasmicContact__RenderFunc(props) {
             projectcss.plasmic_default_styles,
             projectcss.plasmic_mixins,
             projectcss.plasmic_tokens,
-            plasmic_antd_5_hostless_css.plasmic_tokens,
-            plasmic_plasmic_rich_components_css.plasmic_tokens,
             sty.root
           )}
         >
@@ -141,7 +137,6 @@ function PlasmicContact__RenderFunc(props) {
                 data-plasmic-name={"oMenu"}
                 data-plasmic-override={overrides.oMenu}
                 className={classNames("__wab_instance", sty.oMenu)}
-                contact={true}
               />
             </Button>
             <div className={classNames(projectcss.all, sty.freeBox__sLicA)}>
@@ -417,7 +412,7 @@ function PlasmicContact__RenderFunc(props) {
                             sty.text__fmsNa
                           )}
                         >
-                          {"Send the message"}
+                          {"Start Now"}
                         </div>
                       </Button2>
                     </div>

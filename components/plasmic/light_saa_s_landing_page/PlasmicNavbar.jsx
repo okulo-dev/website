@@ -16,7 +16,6 @@ import {
   deriveRenderOpts,
   ensureGlobalVariants,
   hasVariant,
-  set as $stateSet,
   useCurrentUser,
   useDollarState
 } from "@plasmicapp/react-web";
@@ -25,14 +24,12 @@ import Logo from "../../Logo"; // plasmic-import: Z2neU2nUq1Gm/component
 import Button from "../../Button"; // plasmic-import: 1njYuUl2Bkl4/component
 import { useScreenVariants as useScreenVariantsa5G59FrFlpm9 } from "./PlasmicGlobalVariant__Screen"; // plasmic-import: a5g59frFLPM9/globalVariant
 import "@plasmicapp/react-web/lib/plasmic.css";
-import plasmic_antd_5_hostless_css from "../antd_5_hostless/plasmic.module.css"; // plasmic-import: ohDidvG9XsCeFumugENU3J/projectcss
-import plasmic_plasmic_rich_components_css from "../plasmic_rich_components/plasmic.module.css"; // plasmic-import: jkU633o1Cz7HrJdwdxhVHk/projectcss
 import projectcss from "./plasmic.module.css"; // plasmic-import: jLAKfZafnfzEvtQB4DYUAe/projectcss
 import sty from "./PlasmicNavbar.module.css"; // plasmic-import: gVGVMBx2x42k/css
 
 createPlasmicElementProxy;
 
-export const PlasmicNavbar__VariantProps = new Array("products", "contact");
+export const PlasmicNavbar__VariantProps = new Array();
 
 export const PlasmicNavbar__ArgProps = new Array();
 
@@ -56,18 +53,6 @@ function PlasmicNavbar__RenderFunc(props) {
         type: "private",
         variableType: "text",
         initFunc: ({ $props, $state, $queries, $ctx }) => ""
-      },
-      {
-        path: "products",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.products
-      },
-      {
-        path: "contact",
-        type: "private",
-        variableType: "variant",
-        initFunc: ({ $props, $state, $queries, $ctx }) => $props.contact
       }
     ],
 
@@ -96,30 +81,13 @@ function PlasmicNavbar__RenderFunc(props) {
         projectcss.plasmic_default_styles,
         projectcss.plasmic_mixins,
         projectcss.plasmic_tokens,
-        plasmic_antd_5_hostless_css.plasmic_tokens,
-        plasmic_plasmic_rich_components_css.plasmic_tokens,
-        sty.root,
-        {
-          [sty.rootcontact]: hasVariant($state, "contact", "contact"),
-          [sty.rootproducts]: hasVariant($state, "products", "products")
-        }
+        sty.root
       )}
     >
       <Stack__
         as={"div"}
         hasGap={true}
-        className={classNames(projectcss.all, sty.freeBox___3UqMl, {
-          [sty.freeBoxcontact___3UqMlxlo5F]: hasVariant(
-            $state,
-            "contact",
-            "contact"
-          ),
-          [sty.freeBoxproducts___3UqMldDx8S]: hasVariant(
-            $state,
-            "products",
-            "products"
-          )
-        })}
+        className={classNames(projectcss.all, sty.freeBox___3UqMl)}
       >
         <Logo
           data-plasmic-name={"logo"}
@@ -136,18 +104,7 @@ function PlasmicNavbar__RenderFunc(props) {
           className={classNames(projectcss.all, sty.freeBox__a8ZAu)}
         >
           <Button
-            className={classNames("__wab_instance", sty.button___05CxO, {
-              [sty.buttoncontact___05CxOxlo5F]: hasVariant(
-                $state,
-                "contact",
-                "contact"
-              ),
-              [sty.buttonproducts___05CxOdDx8S]: hasVariant(
-                $state,
-                "products",
-                "products"
-              )
-            })}
+            className={classNames("__wab_instance", sty.button___05CxO)}
             color={"navLink"}
             endIcon={
               <svg
@@ -156,35 +113,6 @@ function PlasmicNavbar__RenderFunc(props) {
               />
             }
             link={`/`}
-            onClick={async event => {
-              const $steps = {};
-              $steps["updateVariable"] = true
-                ? (() => {
-                    const actionArgs = {
-                      variable: {
-                        objRoot: $state,
-                        variablePath: ["variable"]
-                      },
-                      operation: 0
-                    };
-                    return (({ variable, value, startIndex, deleteCount }) => {
-                      if (!variable) {
-                        return;
-                      }
-                      const { objRoot, variablePath } = variable;
-                      $stateSet(objRoot, variablePath, value);
-                      return value;
-                    })?.apply(null, [actionArgs]);
-                  })()
-                : undefined;
-              if (
-                $steps["updateVariable"] != null &&
-                typeof $steps["updateVariable"] === "object" &&
-                typeof $steps["updateVariable"].then === "function"
-              ) {
-                $steps["updateVariable"] = await $steps["updateVariable"];
-              }
-            }}
             startIcon={
               <svg
                 className={classNames(projectcss.all, sty.svg___62Iqn)}
@@ -197,44 +125,20 @@ function PlasmicNavbar__RenderFunc(props) {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text__vfOXo,
-                {
-                  [sty.textcontact__vfOXoxlo5F]: hasVariant(
-                    $state,
-                    "contact",
-                    "contact"
-                  ),
-                  [sty.textproducts__vfOXodDx8S]: hasVariant(
-                    $state,
-                    "products",
-                    "products"
-                  )
-                }
+                sty.text__vfOXo
               )}
             >
               {"Home"}
             </div>
           </Button>
           <Button
-            className={classNames("__wab_instance", sty.button__o8YCf, {
-              [sty.buttonproducts__o8YCFdDx8S]: hasVariant(
-                $state,
-                "products",
-                "products"
-              )
-            })}
+            className={classNames("__wab_instance", sty.button__o8YCf)}
             color={"navLink"}
           >
             <Button
               data-plasmic-name={"oProductsButton"}
               data-plasmic-override={overrides.oProductsButton}
-              className={classNames("__wab_instance", sty.oProductsButton, {
-                [sty.oProductsButtonproducts]: hasVariant(
-                  $state,
-                  "products",
-                  "products"
-                )
-              })}
+              className={classNames("__wab_instance", sty.oProductsButton)}
               color={"navLink"}
               endIcon={
                 <svg
@@ -255,28 +159,39 @@ function PlasmicNavbar__RenderFunc(props) {
                 className={classNames(
                   projectcss.all,
                   projectcss.__wab_text,
-                  sty.text__pzdU,
-                  {
-                    [sty.textproducts__pzdUdDx8S]: hasVariant(
-                      $state,
-                      "products",
-                      "products"
-                    )
-                  }
+                  sty.text__pzdU
                 )}
               >
                 {"Products"}
               </div>
             </Button>
           </Button>
+          <div
+            data-plasmic-name={"oDropdown"}
+            data-plasmic-override={overrides.oDropdown}
+            className={classNames(projectcss.all, sty.oDropdown)}
+          >
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text___50VoR
+              )}
+            >
+              {"gg"}
+            </div>
+            <div
+              className={classNames(
+                projectcss.all,
+                projectcss.__wab_text,
+                sty.text__ebivC
+              )}
+            >
+              {"gg"}
+            </div>
+          </div>
           <Button
-            className={classNames("__wab_instance", sty.button__cseOa, {
-              [sty.buttoncontact__cseOAxlo5F]: hasVariant(
-                $state,
-                "contact",
-                "contact"
-              )
-            })}
+            className={classNames("__wab_instance", sty.button__cseOa)}
             color={"navLink"}
             endIcon={
               <svg
@@ -297,14 +212,7 @@ function PlasmicNavbar__RenderFunc(props) {
               className={classNames(
                 projectcss.all,
                 projectcss.__wab_text,
-                sty.text___5A5Wz,
-                {
-                  [sty.textcontact___5A5WZxlo5F]: hasVariant(
-                    $state,
-                    "contact",
-                    "contact"
-                  )
-                }
+                sty.text___5A5Wz
               )}
             >
               {"Contact"}
@@ -325,7 +233,7 @@ function PlasmicNavbar__RenderFunc(props) {
                 role={"img"}
               />
             }
-            link={`/contact`}
+            link={"#"}
             startIcon={
               <svg
                 className={classNames(projectcss.all, sty.svg__zQUrB)}
@@ -353,9 +261,10 @@ function PlasmicNavbar__RenderFunc(props) {
 }
 
 const PlasmicDescendants = {
-  root: ["root", "logo", "oProductsButton"],
+  root: ["root", "logo", "oProductsButton", "oDropdown"],
   logo: ["logo"],
-  oProductsButton: ["oProductsButton"]
+  oProductsButton: ["oProductsButton"],
+  oDropdown: ["oDropdown"]
 };
 
 function makeNodeComponent(nodeName) {
@@ -392,6 +301,7 @@ export const PlasmicNavbar = Object.assign(
     // Helper components rendering sub-elements
     logo: makeNodeComponent("logo"),
     oProductsButton: makeNodeComponent("oProductsButton"),
+    oDropdown: makeNodeComponent("oDropdown"),
     // Metadata about props expected for PlasmicNavbar
     internalVariantProps: PlasmicNavbar__VariantProps,
     internalArgProps: PlasmicNavbar__ArgProps

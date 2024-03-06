@@ -55,8 +55,7 @@
   );
 }
 
-.plasmic_default_styles,
-.plasmic_default_styles:where(.global_segment_override) {
+.plasmic_default_styles {
   --mixin-VtXEB5135Sra_font-family: "Montserrat", sans-serif;
   --mixin-VtXEB5135Sra_font-size: 24px;
   --mixin-VtXEB5135Sra_font-weight: 400;
@@ -183,8 +182,7 @@
 }
 
 @media (max-width: 930px) {
-  .plasmic_default_styles,
-  .plasmic_default_styles:where(.global_segment_override) {
+  .plasmic_default_styles {
     --mixin-VtXEB5135Sra_font-size: 18px;
     --mixin-VtXEB5135Sra_font-weight: 400;
     --mixin-VtXEB5135Sra_white-space: pre-wrap;
@@ -204,8 +202,7 @@
   }
 }
 
-.plasmic_mixins,
-.plasmic_mixins:where(.global_segment_override) {
+.plasmic_mixins {
   --mixin-gmfdrqgeYdLg_white-space: pre-wrap;
   --plasmic-mixin-container_white-space: var(--mixin-gmfdrqgeYdLg_white-space);
   --mixin-p8pY5SGFnH6a_white-space: pre-wrap;
