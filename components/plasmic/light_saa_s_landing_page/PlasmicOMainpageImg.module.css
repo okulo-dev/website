@@ -1,0 +1,14 @@
+.root {
+  object-fit: cover;
+  max-width: 1140px;
+  height: 715px;
+  position: relative;
+}
+.root > picture > img {
+  object-fit: cover;
+}
+@media (max-width: 930px) {
+  .root {
+    height: 601px;
+  }
+}

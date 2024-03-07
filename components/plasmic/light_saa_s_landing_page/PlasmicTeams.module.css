@@ -50,6 +50,7 @@
   margin-top: 32px;
   font-weight: 600;
   text-align: center;
+  font-size: 22px;
   min-width: 0;
 }
 @media (max-width: 930px) {
